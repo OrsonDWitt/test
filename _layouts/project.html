@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{% assign p = site.data.projects | where: "slug", page.project | first %}
+<article class="case">
+<header class="hero">
+<div class="txt">
+<p class="kind">{{ p.kind }}</p>
+<h1>{{ p.title }}{% if p.sub %}<span>{{ p.sub }}</span>{% endif %}</h1>
+<p class="line">{{ p.line }}</p>
+</div>
+<figure><img src="{{ p.img }}" alt="{{ p.alt }}" width="{{ p.w }}" height="{{ p.h }}" style="--pos:{{ p.pos }};view-transition-name:art-{{ p.slug }}"></figure>
+</header>
+<dl class="facts">
+{% for f in p.facts %}<div><dt>{{ f.k }}</dt><dd>{{ f.v }}</dd></div>
+{% endfor %}</dl>
+<div class="story"><div class="prose">
+{{ content }}
+</div></div>
+{% if p.media %}<section class="media" aria-label="Project media">
+{% for m in p.media %}<figure>
+<figcaption>{{ m.caption }}</figcaption>
+<div class="m"{% if m.maxw %} style="max-width:{{ m.maxw }}"{% endif %}>
+{% if m.type == "video" %}<video muted loop playsinline controls preload="none" poster="{{ m.poster }}" aria-label="{{ m.label }}" width="1920" height="1080"><source src="{{ m.src }}" type="video/mp4"></video>
+{% else %}<img src="{{ m.src }}" alt="{{ m.alt }}" width="{{ m.w }}" height="{{ m.h }}" loading="lazy">{% endif %}
+</div>
+</figure>
+{% endfor %}</section>{% endif %}
+<section class="cta" aria-label="Links">
+{% for g in p.links %}<div class="grp">{% if g.group %}<h2>{{ g.group }}</h2>{% endif %}<p>{% for l in g.items %}<a class="btn{% if l.primary %} pri{% endif %}" href="{{ l.u }}" rel="noopener">{{ l.t }}</a>{% endfor %}</p></div>
+{% endfor %}</section>
+</article>
+{% assign projects = site.data.projects %}{% if projects.size > 1 %}
+{% for q in projects %}{% if q.slug == page.project %}{% assign idx = forloop.index0 %}{% endif %}{% endfor %}
+{% assign nidx = idx | plus: 1 | modulo: projects.size %}{% assign n = projects[nidx] %}
+<a class="next" href="{{ n.url }}" style="--nbg:{{ n.bg }};--nfg:{{ n.ink }}">
+<small>Next project, {{ n.kind }}</small>
+<b>{{ n.title }}{% if n.sub %} {{ n.sub }}{% endif %}</b>
+</a>{% endif %}

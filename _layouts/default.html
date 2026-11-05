@@ -1,0 +1,43 @@
+{% assign p = site.data.projects | where: "slug", page.project | first %}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="{% if p %}{{ p.bg }}{% else %}#E8E6DF{% endif %}">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Spectral:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css">
+{% seo %}
+{% feed_meta %}
+</head>
+<body{% if p %} style="--bg:{{ p.bg }};--fg:{{ p.ink }};--accent:{{ p.accent }}"{% endif %}>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+<a class="mark" href="/"><svg class="logo" viewBox="0 0 24 16" aria-hidden="true"><rect width="5" height="16" fill="#D9604F"/><rect x="6.5" width="5" height="16" fill="#E0A64A"/><rect x="13" width="11" height="16" fill="#0F2A47"/></svg>Orson De Witt</a>
+<nav aria-label="Primary">
+<a href="/#work">Work</a>
+<a href="/posts/"{% if page.url contains '/posts/' %} aria-current="page"{% endif %}>Journal</a>
+<a href="/about"{% if page.url == '/about' %} aria-current="page"{% endif %}>About</a>
+<a href="mailto:{{ site.contact }}">Contact</a>
+</nav>
+</header>
+<main id="main">
+{{ content }}
+</main>
+<footer class="foot">
+<p>© {{ site.time | date: "%Y" }} Orson De Witt</p>
+<ul>
+<li><a href="mailto:{{ site.contact }}">{{ site.contact }}</a></li>
+<li><a href="{{ site.discord }}" rel="noopener">Discord</a></li>
+<li><a href="{{ site.github }}" rel="noopener">GitHub</a></li>
+<li><a href="{{ site.steam_creator_page }}" rel="noopener">Steam</a></li>
+<li><a href="{{ site.authors.Orson.twitter }}" rel="noopener">X</a></li>
+<li><a href="{{ site.russian }}" lang="ru" hreflang="ru">Русский</a></li>
+</ul>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>

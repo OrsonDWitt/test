@@ -1,0 +1,90 @@
+# One entry per project. Order here is the order on the homepage and in "Next project".
+# To add a project: add an entry, then create _pages/<slug>.md with `layout: project` and `project: <slug>`.
+- slug: birdmapp
+  url: /birdmapp
+  title: BirdMApp
+  kind: Data app for Windows
+  line: Which birds live where, and when? A map built from a billion sightings.
+  bg: "#D4D6D9"
+  ink: "#16202B"
+  accent: "#D9604F"
+  img: /assets/img/birdmapp.jpg
+  w: 1000
+  h: 1283
+  pos: "78% 22%"
+  alt: "BirdMApp’s map of Europe, with countries shaded coral by how many bird species they hold."
+  facts:
+    - {k: Data, v: "1 billion occurrence records, 2011 to 2021, from GBIF"}
+    - {k: Coverage, v: "More than 10,000 species, month by month"}
+    - {k: Pipeline, v: "R and data.table, up to 30 million rows per month"}
+    - {k: Availability, v: "Windows download, source on GitHub"}
+  media:
+    - {type: video, src: /assets/birdmapp/bird_map.mp4, poster: /assets/img/poster-bird_map.jpg, label: "BirdMApp map view", caption: "See every species you are likely to meet in any region, in any month."}
+    - {type: video, src: /assets/birdmapp/bird_distribution.mp4, poster: /assets/img/poster-bird_distribution.jpg, label: "BirdMApp species ranges", caption: "Ranges rebuilt from a billion occurrences, 2011 to 2021. Follow the monthly migrations of more than 10,000 species and compare them with your own observations."}
+    - {type: video, src: /assets/birdmapp/bird_charts.mp4, poster: /assets/img/poster-bird_charts.jpg, label: "BirdMApp progress charts", caption: "Track your own progress."}
+    - {type: image, src: /assets/img/endemic.jpg, w: 1600, h: 825, alt: "World map showing the number of endemic bird species in each country.", caption: "From the dataset: endemic bird species by country."}
+  links:
+    - items:
+        - {t: "Download for Windows", u: "https://github.com/OrsonDeWitt/BirdMApp/archive/refs/tags/v1.0.1.zip", primary: true}
+        - {t: "Source on GitHub", u: "https://github.com/OrsonDeWitt/BirdMApp"}
+        - {t: "Read the retrospective", u: "/posts/birdmapp-retrospective/"}
+
+- slug: egypt
+  url: /egypt
+  title: Egypt
+  sub: Shattered Order
+  kind: Narrative strategy game, in development
+  line: Reunite a broken kingdom, and answer for it to Osiris.
+  bg: "#FDE6C3"
+  ink: "#4B1629"
+  accent: "#C8442F"
+  img: /assets/img/egypt.jpg
+  w: 900
+  h: 1006
+  pos: "50% 100%"
+  alt: "Layered dunes in sand, amber and red beneath a pale sky."
+  facts:
+    - {k: Status, v: "In its final stages, no release date yet"}
+    - {k: Platform, v: "PC, with a Mac version hoped for"}
+    - {k: Setting, v: "The Second Intermediate Period, with the Hyksos ruling Lower Egypt"}
+    - {k: Made by, v: "One person, from first outline to final build"}
+  links:
+    - items:
+        - {t: "Follow on Steam", u: "https://store.steampowered.com/developer/orcinusgames/", primary: true}
+        - {t: "Join the Discord", u: "https://discord.gg/Nmx4KDKuhJ"}
+        - {t: "Reddit", u: "https://www.reddit.com/r/OrcinusGames"}
+        - {t: "Read the development roadmap", u: "/posts/development-roadmap/"}
+
+- slug: orca
+  url: /books
+  title: Orca Hunting School
+  kind: Novelette in English and Russian
+  line: A young orca must learn to hunt on land. What will mastery cost him?
+  bg: "#0F2A47"
+  ink: "#F4E8DA"
+  accent: "#F3C08F"
+  img: /assets/img/orca.jpg
+  w: 1100
+  h: 1650
+  pos: "50% 58%"
+  alt: "An orca rises from calm water near a pale shoreline at dawn, with gulls in the sky."
+  facts:
+    - {k: Format, v: "E-book novelette"}
+    - {k: Languages, v: 'English, and Russian as <span lang="ru">Косатка. Школа охоты</span>'}
+    - {k: Setting, v: "Peninsula Valdes and its sea lion rookery"}
+    - {k: Price, v: "$0.99 or 1.60 €"}
+  media:
+    - {type: image, src: /assets/img/orca-cover-en.jpg, w: 700, h: 1133, maxw: 22rem, alt: "Cover of Orca Hunting School by Orson De Witt, showing an orca surfacing at dawn.", caption: "English edition"}
+    - {type: image, src: /assets/img/orca-cover-ru.jpg, w: 700, h: 1050, maxw: 22rem, alt: "Russian cover of Косатка. Школа охоты by Орсон де Витт.", caption: "Russian edition"}
+  links:
+    - group: "English edition, $0.99"
+      items:
+        - {t: Amazon, u: "https://www.amazon.com/dp/B01MDU6A44/", primary: true}
+        - {t: Kobo, u: "https://www.kobo.com/ww/en/ebook/orca-hunting-school"}
+        - {t: Smashwords, u: "https://www.smashwords.com/books/view/678230"}
+        - {t: Scribd, u: "https://www.scribd.com/book/330029998/Orca-Hunting-School"}
+    - group: "Russian edition, 1.60 €"
+      items:
+        - {t: Ridero, u: "https://ridero.ru/books/kosatka_shkola_okhoty/", primary: true}
+        - {t: Litres, u: "https://www.litres.ru/book/orson-de-vitt/kosatka-shkola-ohoty-21161411"}
+        - {t: Ozon, u: "https://www.ozon.ru/product/149469381/?oos_search=false"}

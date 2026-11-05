@@ -1,0 +1,53 @@
+name: "Orson De Witt"
+title: "Orson De Witt"
+description: "Orson De Witt is a data analyst who builds software, games and books: BirdMApp, Egypt: Shattered Order, Orca Hunting School."
+url: "https://orsondewitt.com"
+baseurl: ""
+lang: en
+image: /assets/img/og.jpg
+author: "Orson De Witt"
+permalink: /posts/:title/
+include: ["_pages"]
+russian: 'https://ru.orsondewitt.com/'
+english: 'https://orsondewitt.com'
+email: 'author@orsondewitt.com'
+contact: 'dev@orsondewitt.com'
+
+# Links
+books: '/books'
+birdmapp: '/birdmapp'
+games: 'https://orsondewitt.com/egypt'
+discord: 'https://discord.gg/Nmx4KDKuhJ'
+steam_creator_page: 'https://store.steampowered.com/developer/orcinusgames/'
+subreddit: 'OrcinusGames'
+github: 'https://github.com/OrsonDeWitt'
+
+twitter:
+  username: OrsonDeWitt
+  card: summary_large_image
+
+authors:
+  Orson:
+    name: Orson
+    display_name: Orson
+    avatar: 'assets/images/avatar.png'
+    twitter: https://twitter.com/OrsonDeWitt
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope: {path: "", type: "posts"}
+    values: {layout: post}
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+exclude: [CHANGELOG.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock, docker-compose.yml, assets/source, site]

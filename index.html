@@ -1,0 +1,17 @@
+---
+layout: default
+title: Orson De Witt
+---
+<div class="home">
+<section class="intro">
+<h1>A data analyst telling stories through software, games and books.</h1>
+<p>Open to full-time roles and to commissions for apps like BirdMApp. <a href="mailto:{{ site.contact }}">Write to me</a>.</p>
+</section>
+<div class="row" id="work">
+{% for p in site.data.projects %}<a class="slice{% if forloop.first %} on{% endif %}" href="{{ p.url }}" style="--i:{{ forloop.index0 }};--bg:{{ p.bg }};--ink:{{ p.ink }};--pos:{{ p.pos }}">
+<img src="{{ p.img }}" alt="" width="{{ p.w }}" height="{{ p.h }}"{% unless forloop.first %} loading="lazy"{% endunless %} style="view-transition-name:art-{{ p.slug }}">
+<span class="v" aria-hidden="true">{{ p.title }}</span>
+<span class="cap"><span class="in"><small>{{ p.kind }}</small><b>{{ p.title }}{% if p.sub %}<i>{{ p.sub }}</i>{% endif %}</b><span class="l">{{ p.line }}</span></span></span>
+</a>
+{% endfor %}</div>
+</div>
